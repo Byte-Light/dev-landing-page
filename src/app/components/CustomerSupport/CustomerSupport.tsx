@@ -1,87 +1,64 @@
 import Image from "next/image";
 import React from "react";
 import SupportImg from "../../../../public/images/support.jpg";
-import { CheckIcon } from "@heroicons/react/16/solid";
+import { CheckIcon } from "@heroicons/react/24/solid";
 
 const CustomerSupport = () => {
   return (
-    <div className="pt-[5rem] pb-[3rem]">
-      <div className="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[4rem] items-center">
+    <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Image Section */}
         <div
           data-aos="fade-right"
           data-aos-anchor-placement="top-center"
-          className="order-2 lg:order-1"
+          className="relative order-2 lg:order-1"
         >
-          <Image src={SupportImg} alt="support" />
+          <Image
+            src={SupportImg}
+            alt="Customer Support Illustration"
+            className="rounded-lg shadow-lg"
+          />
         </div>
-        <div className="order-1 lg:order-2">
-          <h1
-            data-aos="fade-left"
-            data-aos-anchor-placement="top-center"
-            data-aos-delay="200"
-            className="text-[20px] md:text-[25px] lg:text-[28px] text-[#02073e]
-          font-bold leading-[2rem] md:leading-[3rem]"
-          >
-            Customer support is our main priority with their hundred percent
-            satisfaction.
-          </h1>
-          <p
-            data-aos="fade-right"
-            data-aos-anchor-placement="top-center"
-            data-aos-delay="400"
-            className="mt-[1.5rem] mb-[1.5rem] text-black opacity-90 text-[15px] md:text-[16px]"
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-            animi error deleniti, dignissimos fuga sed velit laboriosam debitis
-            explicabo inventore.
+
+        {/* Content Section */}
+        <div
+          className="order-1 lg:order-2"
+          data-aos="fade-left"
+          data-aos-anchor-placement="top-center"
+        >
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight mb-6">
+            Customer Support That Exceeds Expectations
+          </h2>
+          <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8">
+            We prioritize your satisfaction, ensuring you have a seamless
+            experience. Our dedicated support team is always here to help you
+            with tailored solutions.
           </p>
-          <div
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-center"
-            data-aos-delay="600"
-            className="flex items-center mb-[1rem] space-x-3"
-          >
-            <CheckIcon className="w-[1.3rem] h-[1.3rem] text-red-600" />
-            <p className="text-[17px] text-[#02073e] font-[500]">
-              Medical and Vision
-            </p>
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-center"
-            data-aos-delay="800"
-            className="flex items-center mb-[1rem] space-x-3"
-          >
-            <CheckIcon className="w-[1.3rem] h-[1.3rem] text-red-600" />
-            <p className="text-[17px] text-[#02073e] font-[500]">
-              Life insurance
-            </p>
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-center"
-            data-aos-delay="1000"
-            className="flex items-center mb-[1rem] space-x-3"
-          >
-            <CheckIcon className="w-[1.3rem] h-[1.3rem] text-red-600" />
-            <p className="text-[17px] text-[#02073e] font-[500]">
-              400(k) savings
-            </p>
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-center"
-            data-aos-delay="1200"
-            className="flex items-center mb-[1rem] space-x-3"
-          >
-            <CheckIcon className="w-[1.3rem] h-[1.3rem] text-red-600" />
-            <p className="text-[17px] text-[#02073e] font-[500]">
-              HSAs and FSAs
-            </p>
+
+          {/* Feature List */}
+          <div className="space-y-4">
+            {[
+              "Medical and Vision",
+              "Life Insurance",
+              "401(k) Savings Plans",
+              "Health Savings Accounts (HSAs)",
+            ].map((item, index) => (
+              <div
+                key={index}
+                data-aos="fade-up"
+                data-aos-delay={`${200 + index * 200}`}
+                className="flex items-center space-x-3"
+              >
+                <div className="w-6 h-6 flex items-center justify-center bg-red-100 rounded-full">
+                  <CheckIcon className="w-5 h-5 text-red-600" />
+                </div>
+                <p className="text-lg font-medium text-gray-700">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

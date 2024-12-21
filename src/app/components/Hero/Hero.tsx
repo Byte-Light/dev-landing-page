@@ -6,25 +6,30 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <div
-      className="h-[70vh] lg:h-[88vh] md:h-[80vh] sm:h-[75vh]
-  flex items-center flex-col justify-center"
+      className="h-[75vh] lg:h-[90vh] flex items-center justify-center bg-gradient-to-r 
+      from-blue-500 via-purple-500 to-gray-500 text-white"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-5 items-center w-[80%] mx-auto">
-        <div className="col-span-2">
+      <div className="grid grid-cols-1 lg:grid-cols-5 items-center w-[85%] mx-auto gap-8">
+        {/* Text Section */}
+        <div className="col-span-2 space-y-6">
           <h1
             data-aos="fade-right"
-            className="text-[27px] md:text-[35px] lg:text-[40px] mb-[1rem] font-bold
-          text-[#02073e] leading-[2.4rem] md:leading-[4rem]"
+            className="text-[30px] md:text-[45px] lg:text-[55px] font-extrabold leading-[1.4] lg:leading-[1.2] 
+            tracking-tight"
           >
-            Exploring Innovative Paths to Cultivate Your Business
+            Empowering Your Business with <br />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-pink-500">
+              Innovation & Growth
+            </span>
           </h1>
           <p
             data-aos="fade-left"
             data-aos-delay="200"
-            className="md:text-[17px] text-[15px] mb-[2rem] text-black opacity-90 font-[400]"
+            className="text-[16px] md:text-[18px] lg:text-[20px] font-medium opacity-90 leading-[1.8]"
           >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            atque error ex iure aut nesciunt laborum in sequi, officiis ea?
+            Transform your business with cutting-edge strategies designed to
+            elevate your growth. Discover limitless opportunities tailored to
+            your vision.
           </p>
           <div
             data-aos="zoom-in"
@@ -35,12 +40,19 @@ const Hero = () => {
             <Button text="Explore Features" color="red" />
           </div>
         </div>
+
+        {/* Image Section */}
         <div
           data-aos="fade-left"
           data-aos-delay="600"
-          className="col-span-3 hidden sm:block"
+          className="col-span-3 flex justify-center"
         >
-          <Image src={HeroImg} alt="hero" />
+          <Image
+            src={HeroImg}
+            alt="Hero Image"
+            className="w-full max-w-[500px] lg:max-w-[600px] drop-shadow-lg"
+            priority
+          />
         </div>
       </div>
     </div>

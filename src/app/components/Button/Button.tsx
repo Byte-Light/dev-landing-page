@@ -3,9 +3,10 @@ import React from "react";
 interface Props {
   text: string;
   color?: string;
+  customStyles?: string; // Added customStyles prop
 }
 
-const Button = ({ text, color }: Props) => {
+const Button = ({ text, color, customStyles }: Props) => {
   let colorClasses = "";
   switch (color) {
     case "blue":
@@ -24,9 +25,9 @@ const Button = ({ text, color }: Props) => {
   return (
     <button
       className={
-        `rounded-md px-4 py-1  text-[15px] md:px-8 md:py-2.5 overflow-hidden group relative
+        `rounded-md px-4 py-1 text-[15px] md:px-8 md:py-2.5 overflow-hidden group relative
         hover:bg-gradient-to-r text-white hover:ring-2 hover:ring-offset-2 transition-all
-        ease-out duration-300 ` + colorClasses
+        ease-out duration-300 ` + colorClasses + " " + (customStyles || "")
       }
     >
       <span

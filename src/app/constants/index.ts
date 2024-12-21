@@ -1,32 +1,38 @@
 export const featuresData = [
     {
-        title: 'Email Subscription',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi earum at beatae in inventore natus.',
-        img: require('../../../public/images/icon1.png')
+        title: 'Stay Connected',
+        desc: 'Subscribe to our email list and never miss an update.',
+        img: require('../../../public/images/icon1.png'),
+        alt: 'Envelope icon symbolizing connectivity through emails'
     },
     {
-        title: 'Benefits Highlights',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quisquam similique aliquid nihil aperiam ipsam.',
-        img: require('../../../public/images/icon2.png')
+        title: 'Discover Benefits',
+        desc: 'Highlight key advantages tailored to your needs.',
+        img: require('../../../public/images/icon2.png'),
+        alt: 'Illustration representing valuable highlights'
     },
     {
-        title: 'Data Privacy',
-        desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus saepe totam itaque, voluptas blanditiis officia!',
-        img: require('../../../public/images/icon3.png')
+        title: 'Secure Your Data',
+        desc: 'Protect your information with advanced privacy features.',
+        img: require('../../../public/images/icon3.png'),
+        alt: 'Shield icon ensuring robust data security'
     },
     {
-        title: 'Regular Backups',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non reprehenderit minus eum doloribus, sit facere.',
-        img: require('../../../public/images/icon4.png')
+        title: 'Effortless Backups',
+        desc: 'Keep your data safe with automatic and regular backups.',
+        img: require('../../../public/images/icon4.png'),
+        alt: 'Cloud storage icon indicating seamless backups'
     },
     {
-        title: 'Limited-Time Offers',
-        desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium repellendus quia quaerat iste ex velit.',
-        img: require('../../../public/images/icon5.png')
+        title: 'Exclusive Deals',
+        desc: 'Enjoy time-limited offers specially curated for you.',
+        img: require('../../../public/images/icon5.png'),
+        alt: 'Clock icon indicating urgency of exclusive offers'
     },
     {
-        title: 'Social Proof',
-        desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni eius recusandae ab soluta, optio rem.',
-        img: require('../../../public/images/icon2.png')
+        title: 'Build Trust',
+        desc: 'Leverage authentic social proof to strengthen your brand.',
+        img: require('../../../public/images/icon2.png'),
+        alt: 'Community icon showcasing trust and credibility'
     },
-]
+];
